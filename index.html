@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Titillium+Web&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
     <title>Beroe Live</title>
 </head>
 <body>
@@ -22,6 +23,9 @@
                 <img class="search-img" src="images/search-purple.png" alt="search-icon">
             </div>
         </nav>
+    </header>
+    <!-- section 1 -->
+    <section class="home-section">
         <nav id="navbar-tail">
             <ul>
                 <li><a class="current" href="#" >Dashboard</a></li>
@@ -30,8 +34,7 @@
             </ul>
             <p>Customised Reports</p>
         </nav>
-    </header>
-    <section class="home-section">
+
         <div class="home-info">
             <div class="home-img-div">
                 <img class="home-img" src="images/building.jpg" alt="building-image">
@@ -40,13 +43,15 @@
                 <div class="home-content-div">
                     <p class="primary-color">MARKETING MATERIALS</p>
                     <p>Commercial & <br> Reminder Items <img src="images/caret-circle-white.png" alt="caret-circle-white"></p>
-                    <img class="star-size" src="images/star.png" alt="star">
-                    <img class="star-size" src="images/star.png" alt="star">
-                    <img class="star-size" src="images/star.png" alt="star">
-                    <img class="star-size" src="images/star.png" alt="star">
-                    <img class="star-size" src="images/grey-star.png" alt="grey-star">
-                    <img src="images/share-icon.png" alt="share">
-                    <img src="images/clipboard.png" alt="clipboard">
+                    <div class="align-icons">
+                        <img class="star-size" src="images/star.png" alt="star">
+                        <img class="star-size" src="images/star.png" alt="star">
+                        <img class="star-size" src="images/star.png" alt="star">
+                        <img class="star-size" src="images/star.png" alt="star">
+                        <img class="star-size" src="images/grey-star.png" alt="grey-star">
+                        <img src="images/share-icon.png" alt="share">
+                        <img src="images/clipboard.png" alt="clipboard">
+                    </div>
                 </div>
                 <div class="home-sections-table">
                     <table>
@@ -84,35 +89,105 @@
             <button class="btn">Get Customised Report</button>
         </div>
     </section>
+    <!-- Section 2 -->
+    <section class="graph-section">
+        <h4>INDICIES</h4> 
+        <div class="fade-line"></div>
+        <div class="blog-article">
+            <div class="card white-card">
+                <div class="align-icons">
+                    <p>Facilities Management - Market Size Estimate - Europe, North America and MEA</p>
+                    <img src="images/ellipsis.png" alt="ellipsis">
+                </div>
+                <img src="images/linear-graph.PNG" alt="Avatar">
+            </div>
+            <div class="card white-card">
+                <div class="align-icons">
+                    <p>Facilities Management - Market Size Estimate - Europe, North America and MEA</p>
+                    <img src="images/ellipsis.png" alt="ellipsis">
+                </div>
+                <img src="images/bar-graph.PNG" alt="Avatar">
+            </div>
+            <div class="card grey-card">
+                <img src="images/add-index.png" alt="Avatar">
+                <p>Add Indices</p>
+            </div>
+        </div>
+        <div class="graph-section-footer">
+            <img src="images/chevron-left.png" alt=">">
+            <img src="images/off-state-toggle.png" alt="off-state-icon">
+            <img src="images/off-state-toggle.png" alt="off-state-icon">
+            <img src="images/on-state-toggle.png" alt="onstate-icon">
+            <img src="images/chevron.png" alt=">">
+        </div>
+    </section>
+    <!-- Section 3 -->
     <section class="blog-article">
         <div class="card">
             <h4>BLOG</h4>
-            <img src="images/building.jpg" alt="Avatar" style="width:100%">
+            <img src="images/building.jpg" alt="Avatar">
             <div class="container">
               <h4><b>La Nina to have a positive impact on key Indian crop.</b></h4>
               <p class="blog-author">Sunil Shah | 2 August 2016</p>
               <p class="blog-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Mauris tincidunt velit sit amet tortor ullamcorper venenatis. Pellentesque congue dapibus elem…</p>
+                <div class="align-icons">
+                    <img class="star-size" src="images/grey-star.png" alt="grey-star">
+                    <p class="icons-size" >5</p>
+                    <div class="vl"></div>
+                    <img class="star-size" src="images/comments.png" alt="comments-icon">
+                    <p class="icons-size" >15 K</p>
+                </div>
+                <div class="align-more">
+                    <a href="#">More</a>
+                    <img class="align-more-icon" src="images/chevron.png" alt=">">
+                </div>
             </div>
           </div>
           <div class="card">
             <h4>ARTICLES</h4>
-            <img src="images/building.jpg" alt="Avatar" style="width:100%">
+            <img src="images/building.jpg" alt="Avatar">
             <div class="container">
               <h4><b>La Nina to have a positive impact on key Indian crop.</b></h4>
               <p class="blog-author">Sunil Shah | 2 August 2016</p>
               <p class="blog-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Mauris tincidunt velit sit amet tortor ullamcorper venenatis. Pellentesque congue dapibus elem…</p>
+                <div class="align-icons">
+                    <img class="star-size" src="images/grey-star.png" alt="grey-star">
+                    <p class="icons-size" >5</p>
+                    <div class="vl"></div>
+                    <img class="star-size" src="images/comments.png" alt="comments-icon">
+                    <p class="icons-size" >15 K</p>
+                    <div class="vl"></div>
+                    <img class="down-size" src="images/download-icon.png" alt="download-icon">
+                </div>
+                <div class="align-more">
+                    <a href="#">More</a>
+                    <img class="align-more-icon" src="images/chevron.png" alt=">">
+                </div>
             </div>
           </div>
           <div class="card">
             <h4>WHITEPAPERS</h4>
-            <img src="images/building.jpg" alt="Avatar" style="width:100%">
+            <img src="images/building.jpg" alt="Avatar">
             <div class="container">
               <h4><b>La Nina to have a positive impact on key Indian crop.</b></h4>
               <p class="blog-author">Sunil Shah | 2 August 2016</p>
               <p class="blog-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Mauris tincidunt velit sit amet tortor ullamcorper venenatis. Pellentesque congue dapibus elem…</p>
+                <div class="align-icons">
+                    <img class="star-size" src="images/grey-star.png" alt="grey-star">
+                    <p class="icons-size" >5</p>
+                    <div class="vl"></div>
+                    <img class="star-size" src="images/comments.png" alt="comments-icon">
+                    <p class="icons-size" >15 K</p>
+                    <div class="vl"></div>
+                    <img class="down-size" src="images/download-icon.png" alt="download-icon">
+                </div>
+                <div class="align-more">
+                    <a href="#">More</a>
+                    <img class="align-more-icon" src="images/chevron.png" alt=">">
+                </div>
             </div>
           </div>
     </section>
