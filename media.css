@@ -1,11 +1,26 @@
 @media (max-width: 550px) {
 
-    #navbar-head {
+    #navbar-head ,
+    #navbar-tail {
         text-align: center;
+        display: flex;
+        flex-direction: column;
     }
 
-    #navbar-head ul li a {
+    #navbar-head .navbar-head-right {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #navbar-head span a,
+    #navbar-tail ul li a  {
         font-size: 14px;
+        padding: 5px;
+    }
+
+    #navbar-head #search-bar .search-style,
+    .search-img {
+        padding: 2px;
     }
 
     .blog-article {
@@ -13,6 +28,10 @@
         flex-direction: column;
         padding: 20px;
         align-items: center;
+    }
+
+    .blog-article .card{
+        width: 100%;
     }
 
     .blog-article .card,
@@ -99,6 +118,8 @@
 
     .blog-article .card {
         font-size: 30px;
+        width: 100%;
+
     }
 
     .blog-article .card .container h4 {
