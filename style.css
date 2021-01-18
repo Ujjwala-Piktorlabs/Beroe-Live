@@ -8,16 +8,29 @@ body {
     font-family: 'Titillium Web', sans-serif;
 }
 
+input:focus {
+    outline: none;
+}
+  
 /* Navbar */
 #navbar-head {
     background-color: #776bc8;
     font-size: 16px;
-    padding: 0px 35px;
-    padding-top: 5px;
+    padding: 10px 35px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+#navbar-head img {
+    cursor: pointer;
 }
 
 #navbar-head .navbar-head-right,
@@ -44,15 +57,12 @@ body {
 
 .search-img {
     padding: 10px;
+    cursor: pointer;
 }
 
 #navbar-head .navbar-head-right .align-span {
     display: flex;
     flex-direction: row;
-}
-
-.align-li {
-    display: none;
 }
 
 #navbar-head span .align-li {
@@ -61,7 +71,12 @@ body {
     align-items: center;
 }
 
+#navbar-head span b {
+    margin: 0 10px;
+}
+
 #navbar-tail {
+    margin-top: 70px;
     background-color:rgba(47,42,78,0.3); 
     color: #fff;
     font-size: 16px;
@@ -75,7 +90,8 @@ body {
 }
 
 #navbar-tail ul li a, 
-#navbar-head span a{
+#navbar-head span a,
+#navbar-tail a{
     text-decoration: none;
     color: #fff;
     font-size: 16px;
@@ -83,7 +99,7 @@ body {
     padding: 10px;
 }
 
-#navbar-tail p {
+#navbar-tail a {
     display: block;
     padding: 10px;
     font-size: 16px;
@@ -98,6 +114,7 @@ body {
 }
 
 #navbar-tail ul li a:hover, 
+#navbar-tail a:hover,
 #navbar-tail ul li a.current {
     font-weight: bold;
     background-color: #453b8c;
@@ -116,12 +133,20 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: flex-end;
 }
 
 .home-section img.home-img {
     border: 10px solid #fff;
     height: 450px;
     width: 45vw;
+    object-fit: cover;
+    margin-left: 40px;
+    box-shadow: 0px 1px 4px 0 #696969;
+}
+
+.home-section .home-info .home-img-div {
+    max-height: 450px;
 }
 
 .home-content-div {
@@ -143,6 +168,7 @@ body {
 
 .home-section .home-content-div img {
     margin-left: 15px;
+    cursor: pointer;
 }
 
 .home-section .home-info .home-right-content .home-content-div .align-icons {
@@ -168,6 +194,7 @@ body {
     padding: 20px;
     width: auto;
     box-shadow: 0px 1px 4px 0 #696969;
+    margin-right: 40px;
 }
 
 .home-section .home-info .home-right-content .home-sections-table p {
@@ -178,13 +205,38 @@ body {
     margin: 10px 0;
 }
 
+.home-section .home-info .home-right-content .home-sections-table tr {
+    display: flex;
+}
+
 .home-section .home-info .home-right-content .home-sections-table td {
     padding-right: 10px;
-    border-bottom: 1px solid #dfdfdf;
+    border: 1px solid #dfdfdf;
+    border-collapse: collapse;
+    padding: 3px;
+    flex: 1;
+    word-break: break-all;
+}
+
+.home-section .home-info .home-right-content .home-sections-table td:first-child {
+    border-left: none;
+}
+
+.home-section .home-info .home-right-content .home-sections-table td:nth-child(2) {
+    border-right: none;
+}
+
+.home-section .home-info .home-right-content .home-sections-table .border-top-none {
+    border-top: none;
+}
+
+.home-section .home-info .home-right-content .home-sections-table .border-bottom-none {
+    border-bottom: none;
 }
 
 .home-sections-table img {
     margin-left: 10px;
+    cursor: pointer;
 }
 
 /* Home footer */
@@ -213,6 +265,7 @@ body {
     border-radius: 5px;
     color: #fff;
     margin: 0 10px;
+    cursor: pointer;
 }
 
 /* Section 2 */
@@ -232,8 +285,8 @@ body {
 }
 
 .graph-section .grey-card {
-    background-color: #fff ;
-    opacity: 0.59 ;
+    background-color: #fff;
+    opacity: 0.59;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -253,17 +306,19 @@ body {
 
 .graph-section .align-icons {
     display: flex;
-    flex-direction: flex-start;
-    align-items: center ;
+    align-items: flex-start;
 }
 
 .graph-section .white-card .align-icons p {
-    font-size: 20px;
+    font-size: 14px;
     font-family: 'Open Sans', sans-serif;
+    padding: 5px;
 }
 
 .graph-section .white-card .align-icons img {
     margin: 0;
+    cursor: pointer;
+    padding: 5px;
 }
 
 .graph-section .graph-section-footer {
@@ -276,6 +331,7 @@ body {
 .graph-section .graph-section-footer img {
     height: 12px;
     margin: 10px;
+    cursor: pointer;
 }
 
 .graph-section .graph-section-footer img:first-child,
@@ -286,7 +342,7 @@ body {
 
 .graph-section .fade-line {
     margin-left: 20px;
-    width: 45rem;
+    width: 45%;
     border-style: groove;
     border-image-source: linear-gradient(to left, rgba(146, 146, 146, 0) , #929292 70%);
     border-image-slice: 1;
@@ -305,7 +361,7 @@ body {
     letter-spacing: 0.5px;
     color: #464646;
     padding: 20px;
-    width: 33%;
+    width: 33.33%;
 }
 
 .blog-article .card .container h4 {
@@ -318,6 +374,7 @@ body {
 
 .blog-article .card img {
     margin-top: 15px;
+    object-fit: cover; 
 }
 
 .blog-article .card > img {
@@ -327,6 +384,7 @@ body {
 .graph-section .grey-card > img  {
     margin-bottom: 10px;
     width: 25%;
+    cursor: pointer;
 }
 
 .blog-article .card .blog-author {
@@ -368,6 +426,7 @@ body {
     width: 25px;
     height: 25px;
     margin: 0;
+    cursor: pointer;
 }
 
 .blog-article .card .container .align-icons .vl {
@@ -385,6 +444,22 @@ body {
 .align-more img.align-more-icon {
     margin: 0;
     margin-left: 5px;
+}
+
+.blog-article .card .inner-container {
+    min-height: 250px;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+}
+
+.max-lines {
+    display: block;/* or inline-block */
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow: hidden;
+    max-height: 5.2em;
+    line-height: 1.8em;
 }
 
 /* Footer */

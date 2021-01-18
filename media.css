@@ -7,6 +7,14 @@
         flex-direction: column;
     }
 
+    #navbar-head{
+        height: 150px;
+    }
+
+    #navbar-tail {
+        margin-top: 150px;
+    }
+
     #navbar-head .navbar-head-right {
         display: flex;
         flex-direction: column;
@@ -21,6 +29,11 @@
     #navbar-head #search-bar .search-style,
     .search-img {
         padding: 2px;
+    }
+
+    .home-section img.home-img,
+    .home-section .home-info .home-right-content .home-sections-table {
+        margin: 0;
     }
 
     .blog-article {
