@@ -99,7 +99,9 @@ input:focus {
     background-image: url('images/background.png');
     background-repeat: no-repeat;
     background-size: 100%;
+    box-shadow: 0px 1px 4px 0 #000;
     z-index: 1;
+    position: relative;
 }
 
 #navbar-tail ul li a, 
@@ -297,7 +299,7 @@ input:focus {
 }
 
 .graph-section h4 {
-    margin-left: 30px;
+    margin-left: 40px;
     color: #464646;
     font-size: 18px;
 }
@@ -318,7 +320,7 @@ input:focus {
 }
 
 .graph-section .card {
-    margin: 10px;
+    margin: 20px;
     width: 33.3%;
 }
 
