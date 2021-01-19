@@ -7,14 +7,6 @@
         flex-direction: column;
     }
 
-    #navbar-head{
-        height: 150px;
-    }
-
-    #navbar-tail {
-        margin-top: 150px;
-    }
-
     #navbar-head .navbar-head-right {
         display: flex;
         flex-direction: column;
@@ -34,6 +26,10 @@
     .home-section img.home-img,
     .home-section .home-info .home-right-content .home-sections-table {
         margin: 0;
+    }
+
+    .home-section .home-info .home-right-content .home-sections-table td {
+        padding: 0 3px;
     }
 
     .blog-article {
@@ -60,6 +56,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        padding-top: 30px;
     }
 
     .home-section .home-footer {
@@ -85,6 +82,10 @@
         font-size: 28px;
     }
 
+    .graph-section {
+        justify-content: center;
+    }
+
     .graph-section .card {
         margin: 10px;
         width: 90%;
@@ -105,6 +106,7 @@
         display: flex;
         flex-direction: column;
         padding: 20px;
+        justify-content: center;
         align-items: center;
     }
 
