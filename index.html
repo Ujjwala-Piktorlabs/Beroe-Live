@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Titillium+Web&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="script.css">
     <title>Beroe Live</title>
 </head>
 <body>
@@ -21,20 +22,33 @@
                     <img class="search-img" src="images/search-purple.png" alt="search-icon">
                 </div>
                 <div class="align-span">
-                    <span><a class="align-li" href="#"><img src="images/notification-icon.png" alt="noti-icon"></a></span>
-                    <span><a class="align-li" href="#"><img src="images/white-circle2.png" alt="white-circle"><b>Hi John!</b></a></span>
-                    <span><a class="align-li" href="#"><img src="images/ask-beroe.png" alt="ask-beroe"><b>Ask Beroe</b></a></span>
+                    <span><a class="align-li" id="dropdown" href="#">
+                        <img src="images/notification-icon.png" onclick="openNoti()" alt="noti-icon"></a>
+                    </span>
+                    <span><a class="align-li" href="#">
+                        <img src="images/white-circle2.png" alt="white-circle"><b>Hi John!</b></a>
+                    </span>
+                    <span  id="ask-beroe"><a class="align-li side-bar-open" href="#">
+                        <img class="side-bar-open" src="images/ask-beroe.png" alt="ask-beroe"><b class="side-bar-open">Ask Beroe</b></a>
+                    </span>
                 </div>
             </div>
         </nav>
         <nav id="navbar-tail">
             <ul>
-                <li><a class="current" href="#" >Dashboard</a></li>
-                <li><a href="#">Discussions</a></li>
-                <li><a href="#">Interesting Reads</a></li>
+                <li><a class="nav active" href="#">Dashboard</a></li>
+                <li><a class="nav" href="#">Discussions</a></li>
+                <li><a class="nav" href="#">Interesting Reads</a></li>
             </ul>
-            <a href="#">Customised Reports</a>
+            <a class="nav" href="#">Customised Reports</a>
         </nav>
+        <div class="sidebar animate-right" id="right-menu">
+            <button id="side-bar-close" class="btn">Close &times;</button>
+        </div>
+        <div class="noti-card animate-top arrow" id="noti-toggle">
+            <p>Notifications</p>
+            <button class="btn" onclick="closeNoti()">Close &times;</button>
+        </div>
     </header>
     <!-- section 1 -->
     <div class="page-content">
@@ -135,7 +149,7 @@
                     <div class="card-header">
                         <h4><b>La Nina to have a positive impact on key Indian crop.</b></h4>
                         <p class="blog-author">Sunil Shah | 2 August 2016</p>
-                        <p class="blog-content max-lines">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, ut facilis laboriosam non et labore, adipisci maxime dolore eos velit in? Error dicta veritatis dolor quas nemo distinctio, recusandae consequuntur eveniet ipsam porro, aspernatur cumque laudantium voluptatum obcaecati, accusamus voluptatem. Eos at magni magnam, veniam laudantium temporibus consequatur eveniet sunt!</p>
+                        <p class="blog-content max-lines show-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, ut facilis laboriosam non et labore, adipisci maxime dolore eos velit in? Error dicta veritatis dolor quas nemo distinctio, recusandae consequuntur eveniet ipsam porro, aspernatur cumque laudantium voluptatum obcaecati, accusamus voluptatem. Eos at magni magnam, veniam laudantium temporibus consequatur eveniet sunt!</p>
                     </div>
                     <div class="card-footer">
                         <div class="align-icons">
@@ -146,7 +160,7 @@
                             <p class="icons-size" >15 K</p>
                         </div>
                         <div class="align-more">
-                            <a href="#">More</a>
+                            <a href="#" class="change-link-text">More</a>
                             <img class="align-more-icon" src="images/chevron.png" alt=">">
                         </div>
                     </div>
@@ -161,7 +175,7 @@
                     <div class="card-header">
                         <h4><b>La Nina to have a positive impact on key Indian crop.</b></h4>
                         <p class="blog-author">Sunil Shah | 2 August 2016</p>
-                        <p class="blog-content max-lines">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus vel voluptatem dolorum veritatis modi, quas deserunt magnam accusamus atque molestias dicta in eos. Rerum alias repudiandae numquam repellendus dignissimos? Numquam voluptates quidem itaque. Quae delectus aspernatur consequuntur enim, voluptas vitae perspiciatis iste consequatur beatae! Amet soluta veniam fugiat nam praesentium!</p>
+                        <p class="blog-content max-lines show-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus vel voluptatem dolorum veritatis modi, quas deserunt magnam accusamus atque molestias dicta in eos. Rerum alias repudiandae numquam repellendus dignissimos? Numquam voluptates quidem itaque. Quae delectus aspernatur consequuntur enim, voluptas vitae perspiciatis iste consequatur beatae! Amet soluta veniam fugiat nam praesentium!</p>
                     </div>
                     <div class="card-footer">
                         <div class="align-icons">
@@ -174,7 +188,7 @@
                             <img class="down-size" src="images/download-icon.png" alt="download-icon">
                         </div>
                         <div class="align-more">
-                            <a href="#">More</a>
+                            <a href="#" class="change-link-text">More</a>
                             <img class="align-more-icon" src="images/chevron.png" alt=">">
                         </div>
                     </div>
@@ -189,7 +203,7 @@
                     <div class="card-header">
                         <h4><b>La Nina to have a positive impact on key Indian crop.</b></h4>
                         <p class="blog-author">Sunil Shah | 2 August 2016</p>
-                        <p class="blog-content max-lines">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam quasi possimus nobis, consectetur debitis quibusdam. Expedita officia enim provident! Eligendi ullam, quia impedit atque porro odit blanditiis ad rerum reiciendis nulla sint temporibus nam velit. Cupiditate harum quod pariatur, fugit inventore, quae debitis laudantium eveniet omnis vel rerum quis dolorem?</p>
+                        <p class="blog-content max-lines show-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam quasi possimus nobis, consectetur debitis quibusdam. Expedita officia enim provident! Eligendi ullam, quia impedit atque porro odit blanditiis ad rerum reiciendis nulla sint temporibus nam velit. Cupiditate harum quod pariatur, fugit inventore, quae debitis laudantium eveniet omnis vel rerum quis dolorem?</p>
                     </div>
                     <div class="card-footer">
                         <div class="align-icons">
@@ -202,7 +216,7 @@
                             <img class="down-size" src="images/download-icon.png" alt="download-icon">
                         </div>
                         <div class="align-more">
-                            <a href="#">More</a>
+                            <a href="#" class="change-link-text">More</a>
                             <img class="align-more-icon" src="images/chevron.png" alt=">">
                         </div>
                     </div>
@@ -215,5 +229,6 @@
         <div class="footer-style">
         </div>
     </footer>
+    <script src="index.js"></script>
 </body>
 </html>

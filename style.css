@@ -130,9 +130,16 @@ input:focus {
 
 #navbar-tail ul li a:hover, 
 #navbar-tail a:hover,
-#navbar-tail ul li a.current {
+#navbar-tail ul li a.active,
+#navbar-tail a.active {
     font-weight: bold;
     background-color: #453b8c;
+}
+
+.dropdown {
+    display:inline-block;
+    margin-left:20px;
+    padding:10px;
 }
 
 /* Section 1 */
@@ -322,6 +329,7 @@ input:focus {
 .graph-section .card {
     margin: 20px;
     width: 33.3%;
+    border-radius: 3px;
 }
 
 .graph-section .align-icons {
