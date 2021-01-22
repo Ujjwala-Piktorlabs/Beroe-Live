@@ -6,8 +6,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Titillium+Web&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="media.css">
     <link rel="stylesheet" href="script.css">
+    <link rel="stylesheet" href="media.css">
     <title>Beroe Live</title>
 </head>
 <body>
@@ -45,9 +45,11 @@
         <div class="sidebar animate-right" id="right-menu">
             <button id="side-bar-close" class="btn">Close &times;</button>
         </div>
-        <div class="noti-card animate-top arrow" id="noti-toggle">
-            <p>Notifications</p>
-            <button class="btn" onclick="closeNoti()">Close &times;</button>
+        <div class="noti-card animate-top" id="noti-toggle">
+            <div class="arrow_box">
+                <h3>Notifications</h3>
+                <button class="btn" onclick="closeNoti()">Close &times;</button>
+            </div>
         </div>
     </header>
     <!-- section 1 -->
@@ -109,35 +111,39 @@
     </section>
     <!-- Section 2 -->
     <section class="graph-section">
-        <h4>INDICIES</h4> 
-        <div class="fade-line"></div>
-        <div class="blog-article">
-            <div class="card white-card">
+    <h4>INDICIES</h4> 
+    <div class="fade-line"></div>
+    <div class="carousel-wrapper">
+    <div class="carousel">
+        <!-- <div class="blog-article"> -->
+            <div class="card white-card carousel-photo initial">
                 <div class="align-icons">
                     <p>Facilities Management - Market Size Estimate - Europe, North America and MEA</p>
                     <img src="images/ellipsis.png" alt="ellipsis">
                 </div>
                 <img src="images/linear-graph.PNG" alt="Avatar">
             </div>
-            <div class="card white-card">
+            <div class="card white-card carousel-photo">
                 <div class="align-icons">
                     <p>Facilities Management - Market Size Estimate - Europe, North America and MEA</p>
                     <img src="images/ellipsis.png" alt="ellipsis">
                 </div>
                 <img src="images/bar-graph.PNG" alt="Avatar">
             </div>
-            <div class="card grey-card">
+            <div class="card grey-card carousel-photo">
                 <img src="images/add-index.png" alt="Avatar">
                 <p>Add Indices</p>
             </div>
-        </div>
+        <!-- </div> -->
         <div class="graph-section-footer">
-            <img src="images/chevron-left.png" alt=">">
+            <img class="carousel-button-prev" src="images/chevron-left.png" alt=">">
             <img src="images/off-state-toggle.png" alt="off-state-icon">
             <img src="images/off-state-toggle.png" alt="off-state-icon">
             <img src="images/on-state-toggle.png" alt="onstate-icon">
-            <img src="images/chevron.png" alt=">">
+            <img class="carousel-button-next" src="images/chevron.png" alt=">">
         </div>
+    </div>
+    </div>
     </section>
     <!-- Section 3 -->
     <section class="blog-article">

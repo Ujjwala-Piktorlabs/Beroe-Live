@@ -5,7 +5,7 @@
 }
 .sidebar {
     height:100%;
-    width:200px;
+    width:250px;
     background-color:#fff;
     position:fixed!important;
     z-index:1;
@@ -32,15 +32,17 @@
 #noti-toggle{
     display: none;
     right: 50px;
-    top: 70px;
+    top: 76px;
+    padding: 20px;
 }
 .noti-card {
-    background-color: #ccc;
+    background-color: #fff;
     position: fixed!important;
     z-index: 3;
     overflow: auto;
     width: 300px;
     height: 300px;
+    color: #5d52a8;
 }
 .animate-top {
     position:relative;
@@ -56,14 +58,18 @@
         opacity:1;
     }
 }
-
-div.arrow:before {
+.arrow_box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.arrow_box::before {
     content: ' ';
     height: 0;
-    position: absolute;
+    position: fixed !important;
     width: 0;
-    top: -10px;
-    border: 10px solid transparent;
-    border-bottom-color: #5d52a8;
-    z-index: 5;
-  }
+    top: 44px ;
+    right: 318px;
+    border: 16px solid transparent;
+    border-bottom-color: #fff;
+}

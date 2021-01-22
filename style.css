@@ -499,3 +499,42 @@ input:focus {
     height: 35px;
     width: 100%;
 }
+
+/* Carousel styling */
+.carousel-wrapper {
+    overflow: hidden;
+    width: 90%;
+}
+.carousel-wrapper * {
+    box-sizing: border-box;
+}
+.carousel {
+    transform-style: preserve-3d;
+}
+.carousel-photo.initial,
+.carousel-photo.active {
+  opacity: 1;
+  position: relative;
+  z-index: 900;
+}
+.carousel-photo.prev,
+.carousel-photo.next {
+  z-index: 800;
+}
+.carousel-photo.prev {
+  transform: translateX(-100%); /* Move 'prev' item to the left */
+}
+.carousel-photo.next {
+  transform: translateX(100%); /* Move 'next' item to the right */
+}
+.carousel-button-prev {
+  left:0;
+}
+.carousel-button-next {
+  right:0;
+}
+.carousel-button-next::after {
+  left: 47%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+

@@ -75,7 +75,6 @@
 
     .home-section .home-img-div {
         text-align: center;
-
     }
 
     .home-content-div {
@@ -99,6 +98,13 @@
         font-size: 14px;
     }
 
+    #noti-toggle{
+        top: 155px;
+    }
+
+    .arrow_box::before {
+        top: 124px;
+    }
 }
 
 @media (min-width: 551px) and (max-width: 768px) {
@@ -134,7 +140,6 @@
     .blog-article .card {
         font-size: 30px;
         width: 100%;
-
     }
 
     .blog-article .card .container h4 {
@@ -148,7 +153,6 @@
     .blog-article .card .container .align-icons .icons-size {
         font-size: 20px;
     }
-
 }
 
 @media (max-height: 450px) {
