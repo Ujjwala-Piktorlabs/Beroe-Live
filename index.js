@@ -80,41 +80,66 @@ function closeNoti() {
   document.getElementById("noti-toggle").style.display = "none";
 }
 
-// carousel 
-$('.owl-carousel').owlCarousel({
-  loop:false,
-  margin:10,
-  nav:true,
-  navText: ["<img src='images/chevron-left.png' style='height:13px'>","<img src='images/chevron.png' style='height:13px'>"],
-  // autoplay:true,
-  // autoplayTimeout:3000,
-  responsive:{
-      0:{
-          items:1
-      },
-      600:{
-          items:3
-      },
-      1000:{
-          items:3
+// carousel *******************************************
+$(document).ready(function(){
+  $(".owl-carousel").owlCarousel(
+    {
+      loop:false,
+      margin:10,
+      nav:true,
+      navText: ["<img src='images/chevron-left.png' style='height:13px'>","<img src='images/chevron.png' style='height:13px'>"],
+      autoplay:true,
+      autoplayTimeout:3000,
+      responsive:{
+          0:{
+              items:1
+          },
+          600:{
+              items:2
+          },
+          1000:{
+              items:3
+          }
       }
-  }
-})
+    }
+  );
+});
 
-// let owlCarousel = jQuery(".owl-carousel").data('owlCarousel');
-// owlCarousel.removeItem(1);
-
-// $("#click").click(function(e) {
-//   e.preventDefault(); //-- prevent form submit
-//   $('#avatar-carousel').trigger('add.owl.carousel', ['<div class="item"><img src="http://placehold.it/140x100" alt=""></div>'])
-//       .trigger('refresh.owl.carousel');
-// });
-
-function addItem(){
-  $('#avatar-carousel').trigger('add.owl.carousel', ['<div class="item"><img src="http://placehold.it/140x100" alt=""></div>']).trigger('refresh.owl.carousel'); 
+function clickedElips(e) {
+  let parentNode = e.target.parentNode.parentNode.parentNode.parentNode
+  parentNode.classList.add('Delete')
+  document.getElementById('id02').style.display='block'
 }
 
-// function delItem(){
-//   let owlCarousel = jQuery(".owl-carousel").data('owlCarousel');
-//   owlCarousel.removeItem(1);
-// }
+function noDel(){
+  let nodel = document.querySelectorAll(".Delete");
+  nodel.forEach(el=>{
+    el.classList.remove('Delete')
+  })
+  document.getElementById('id02').style.display='none'
+}
+
+$('#click-del').click(function(e){ 
+  let i = 0
+  e.preventDefault(); //-- prevent form submit
+  let item = document.getElementsByClassName('item')
+  for(i=0; i < item.length; i++){
+    if(item[i].classList.contains('Delete')) 
+    break;
+  }
+  document.getElementById('id02').style.display='none'
+  $(".owl-carousel").trigger('remove.owl.carousel', [i]).trigger('refresh.owl.carousel');
+});
+
+function addCarousel(e) {
+  e.preventDefault(); //-- prevent form submit
+
+  let dataToAdd = '<div class="item"> <div class="blog-article"> <div class="card white-card"> <div class="align-icons"> <p>100 Facilities Management - Market Size Estimate - Europe, North America and MEA</p> <img onclick="clickedElips(event)" src="images/ellipsis.png" alt="ellipsis"> </div> <div class="img-resize"><img src="https://source.unsplash.com/random.PNG" alt="Avatar"></div> </div> </div> </div>'
+
+  let items = document.getElementsByClassName('item')
+  console.log(items.length);
+
+  $('.owl-carousel').trigger('add.owl.carousel',  [$(dataToAdd),items.length-1])
+      .trigger('refresh.owl.carousel');
+  document.getElementById('id01').style.display='none'
+}

@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Titillium+Web&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="script.css">
     <link rel="stylesheet" href="media.css">
@@ -122,7 +122,7 @@
                 <div class="card white-card">
                     <div class="align-icons">
                         <p>1 Facilities Management - Market Size Estimate - Europe, North America and MEA</p>
-                        <img onclick="document.getElementById('id02').style.display='block'" src="images/ellipsis.png" alt="ellipsis">
+                        <img onclick="clickedElips(event)" src="images/ellipsis.png" alt="ellipsis">
                     </div>
                     <div class="img-resize"><img src="images/bar-graph.PNG" alt="Avatar"></div>
                 </div>
@@ -133,7 +133,7 @@
                 <div class="card white-card">
                     <div class="align-icons">
                         <p>2 Facilities Management - Market Size Estimate - Europe, North America and MEA</p>
-                        <img onclick="document.getElementById('id02').style.display='block'" src="images/ellipsis.png" alt="ellipsis">
+                        <img onclick="clickedElips(event)" src="images/ellipsis.png" alt="ellipsis">
                     </div>
                     <div class="img-resize"><img src="images/linear-graph.PNG" alt="Avatar"></div>
                 </div>
@@ -144,7 +144,7 @@
                 <div class="card white-card">
                     <div class="align-icons">
                         <p>3 Facilities Management - Market Size Estimate - Europe, North America and MEA</p>
-                        <img onclick="document.getElementById('id02').style.display='block'" src ="images/ellipsis.png" alt="ellipsis">
+                        <img onclick="clickedElips(event)" src ="images/ellipsis.png" alt="ellipsis">
                     </div>
                     <div class="img-resize"><img src="https://picsum.photos/seed/picsum/200/300" alt="Avatar"></div>
                 </div>
@@ -155,7 +155,7 @@
                 <div class="card white-card">
                     <div class="align-icons">
                         <p>4 Facilities Management - Market Size Estimate - Europe, North America and MEA</p>
-                        <img onclick="document.getElementById('id02').style.display='block'" src="images/ellipsis.png" alt="ellipsis">
+                        <img onclick="clickedElips(event)" src="images/ellipsis.png" alt="ellipsis">
                     </div>
                     <div class="img-resize"><img src="https://picsum.photos/200" alt="Avatar"></div>
                 </div>
@@ -166,7 +166,7 @@
                 <div class="card white-card">
                     <div class="align-icons">
                         <p>5 Facilities Management - Market Size Estimate - Europe, North America and MEA</p>
-                        <img onclick="document.getElementById('id02').style.display='block'" src="images/ellipsis.png" alt="ellipsis">
+                        <img onclick="clickedElips(event)" src="images/ellipsis.png" alt="ellipsis">
                     </div>
                     <div class="img-resize"><img src="https://source.unsplash.com/random.PNG" alt="Avatar"></div>
                 </div>
@@ -181,33 +181,33 @@
             </div>
         </div>
     </div>
-    <div id="id01" class="w3-modal">
-        <div class="w3-modal-content">
-            <header class="w3-container"> 
+    <div id="id01" class="modal">
+        <div class="modal-content">
+            <header class="container"> 
                 <span onclick="document.getElementById('id01').style.display='none'" 
-                class="w3-button w3-display-topright">&times;</span>
+                class="button display-topright">&times;</span>
                 <h1>Add Indices</h1>
             </header>
-            <div class="w3-container">
+            <div class="container">
                 <h4>Click Submit to add an index to the page</h4>
             </div>
-            <footer class="w3-container">
-                <button class="btn submit" id="click" onclick="addItem()">Submit</button>          
+            <footer class="container">
+                <button class="btn submit" id="click-add" onclick="addCarousel(event)">Submit</button>          
             </footer>
         </div>
     </div>
-    <div id="id02" class="w3-modal">
-        <div class="w3-modal-content">
-            <header class="w3-container"> 
-                <span onclick="document.getElementById('id02').style.display='none'" 
-                class="w3-button w3-display-topright">&times;</span>
+    <div id="id02" class="modal">
+        <div class="modal-content">
+            <header class="container"> 
+                <span onclick="noDel()" 
+                class="button display-topright">&times;</span>
                 <h1>Delete Indices</h1>
             </header>
-            <div class="w3-container">
+            <div class="container">
                 <h4>Click Submit to delete this Index</h4>
             </div>
-            <footer class="w3-container">
-                <button class="btn delete" id="click-del" onclick="delItem()">Delete</button>          
+            <footer class="container">
+                <button class="btn delete" id="click-del">Delete</button>          
             </footer>
         </div>
     </div>
