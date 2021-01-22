@@ -13,7 +13,7 @@ for (let i = 0; i < icons.length; i++) {
 let message = document.getElementsByClassName("change-link-text");
 for (let i = 0; i < message.length; i++) {
   message[i].addEventListener("click", function() {
-  let current = document.getElementsByClassName("show-text");
+  let current = document.getElementsByClassName(" show-text");
     for (let j = i; j < current.length; j++){
       if (message[i].textContent == 'More'){
         current[j].style.cssText = "display: block;";
@@ -86,8 +86,8 @@ $('.owl-carousel').owlCarousel({
   margin:10,
   nav:true,
   navText: ["<img src='images/chevron-left.png' style='height:13px'>","<img src='images/chevron.png' style='height:13px'>"],
-  autoplay:true,
-  autoplayTimeout:3000,
+  // autoplay:true,
+  // autoplayTimeout:3000,
   responsive:{
       0:{
           items:1
@@ -101,8 +101,8 @@ $('.owl-carousel').owlCarousel({
   }
 })
 
-let owlCarousel = jQuery(".owl-carousel").data('owlCarousel');
-owlCarousel.removeItem(1);
+// let owlCarousel = jQuery(".owl-carousel").data('owlCarousel');
+// owlCarousel.removeItem(1);
 
 // $("#click").click(function(e) {
 //   e.preventDefault(); //-- prevent form submit
@@ -110,8 +110,11 @@ owlCarousel.removeItem(1);
 //       .trigger('refresh.owl.carousel');
 // });
 
-
 function addItem(){
-  $('#avatar-carousel').trigger('add.owl.carousel', 
-  ['<div class="item"><img src="http://placehold.it/140x100" alt=""></div>']).trigger('refresh.owl.carousel'); 
+  $('#avatar-carousel').trigger('add.owl.carousel', ['<div class="item"><img src="http://placehold.it/140x100" alt=""></div>']).trigger('refresh.owl.carousel'); 
 }
+
+// function delItem(){
+//   let owlCarousel = jQuery(".owl-carousel").data('owlCarousel');
+//   owlCarousel.removeItem(1);
+// }

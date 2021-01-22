@@ -90,11 +90,11 @@
     height: 12px;
     margin: 5px 7px;
     width: 12px;
-    filter: Alpha(Opacity=500);/*IE7 fix*/
+    filter: Alpha(Opacity=500);
     opacity: 0.5;
 }
 .owl-controls .owl-dot.active span, .owl-controls .owl-dot:hover span {
-    filter: Alpha(Opacity=100);/*IE7 fix*/
+    filter: Alpha(Opacity=100);
     opacity: 1;
 }
 .owl-prev {
