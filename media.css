@@ -1,4 +1,4 @@
-@media (max-width: 550px) {
+@media (max-width: 560px) {
 
     #navbar-head ,
     #navbar-tail {
@@ -95,7 +95,7 @@
     }
 
     .graph-section .white-card .align-icons p {
-        font-size: 14px;
+        font-size: 12px!important;
     }
 
     #noti-toggle{
@@ -138,7 +138,7 @@
     }
 
     .blog-article .card {
-        font-size: 30px;
+        /* font-size: 30px; */
         width: 100%;
     }
 

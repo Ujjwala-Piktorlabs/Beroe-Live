@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Titillium+Web&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="script.css">
     <link rel="stylesheet" href="media.css">
@@ -113,36 +115,70 @@
     <section class="graph-section">
     <h4>INDICIES</h4> 
     <div class="fade-line"></div>
-    <div class="carousel-wrapper">
-    <div class="carousel">
-        <!-- <div class="blog-article"> -->
-            <div class="card white-card carousel-photo initial">
-                <div class="align-icons">
-                    <p>Facilities Management - Market Size Estimate - Europe, North America and MEA</p>
-                    <img src="images/ellipsis.png" alt="ellipsis">
+    <div class="owl-carousel owl-theme">
+        <div class="item">
+            <div class="blog-article">
+                <div class="card white-card">
+                    <div class="align-icons">
+                        <p>Facilities Management - Market Size Estimate - Europe, North America and MEA</p>
+                        <img src="images/ellipsis.png" alt="ellipsis">
+                    </div>
+                    <img src="images/linear-graph.PNG" alt="Avatar">
                 </div>
-                <img src="images/linear-graph.PNG" alt="Avatar">
             </div>
-            <div class="card white-card carousel-photo">
-                <div class="align-icons">
-                    <p>Facilities Management - Market Size Estimate - Europe, North America and MEA</p>
-                    <img src="images/ellipsis.png" alt="ellipsis">
-                </div>
-                <img src="images/bar-graph.PNG" alt="Avatar">
-            </div>
-            <div class="card grey-card carousel-photo">
-                <img src="images/add-index.png" alt="Avatar">
-                <p>Add Indices</p>
-            </div>
-        <!-- </div> -->
-        <div class="graph-section-footer">
-            <img class="carousel-button-prev" src="images/chevron-left.png" alt=">">
-            <img src="images/off-state-toggle.png" alt="off-state-icon">
-            <img src="images/off-state-toggle.png" alt="off-state-icon">
-            <img src="images/on-state-toggle.png" alt="onstate-icon">
-            <img class="carousel-button-next" src="images/chevron.png" alt=">">
         </div>
-    </div>
+        <div class="item">
+            <div class="blog-article">
+                <div class="card white-card">
+                    <div class="align-icons">
+                        <p>Facilities Management - Market Size Estimate - Europe, North America and MEA</p>
+                        <img src="images/ellipsis.png" alt="ellipsis">
+                    </div>
+                    <img src="images/linear-graph.PNG" alt="Avatar">
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="blog-article">
+                <div class="card white-card">
+                    <div class="align-icons">
+                        <p>Facilities Management - Market Size Estimate - Europe, North America and MEA</p>
+                        <img src ="images/ellipsis.png" alt="ellipsis">
+                    </div>
+                    <img src="images/bar-graph.PNG" alt="Avatar">
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="blog-article">
+                <div class="card white-card">
+                    <div class="align-icons">
+                        <p>Facilities Management - Market Size Estimate - Europe, North America and MEA</p>
+                        <img src="images/ellipsis.png" alt="ellipsis">
+                    </div>
+                    <img src="images/linear-graph.PNG" alt="Avatar">
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="blog-article">
+                <div class="card white-card">
+                    <div class="align-icons">
+                        <p>Facilities Management - Market Size Estimate - Europe, North America and MEA</p>
+                        <img src="images/ellipsis.png" alt="ellipsis">
+                    </div>
+                    <img src="images/bar-graph.PNG" alt="Avatar">
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="blog-article">
+                <div class="card grey-card" id="click">
+                    <img onclick="addItem()" src="images/add-index.png" alt="Avatar">
+                    <p>Add Indices</p>
+                </div>
+            </div>
+        </div>
     </div>
     </section>
     <!-- Section 3 -->
@@ -235,6 +271,8 @@
         <div class="footer-style">
         </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
     <script src="index.js"></script>
 </body>
 </html>
