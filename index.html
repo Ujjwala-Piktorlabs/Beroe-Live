@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" />
     <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="script.css">
-    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/script.css">
+    <link rel="stylesheet" href="css/media.css">
     <title>Beroe Live</title>
 </head>
 <body>
@@ -26,12 +26,12 @@
                 </div>
                 <div class="align-span">
                     <span><a class="align-li" id="dropdown" href="#">
-                        <img src="images/notification-icon.png" onclick="openNoti()" alt="noti-icon"></a>
+                        <img src="images/notification-icon.png" onclick="toggleHiddenItems(event,'noti-toggle')" alt="noti-icon"></a>
                     </span>
                     <span><a class="align-li" href="#">
                         <img src="images/white-circle2.png" alt="white-circle"><b>Hi John!</b></a>
                     </span>
-                    <span  id="ask-beroe"><a class="align-li side-bar-open" href="#">
+                    <span onclick="toggleHiddenItems(event,'right-menu')" id="ask-beroe"><a class="align-li side-bar-open" href="#">
                         <img class="side-bar-open" src="images/ask-beroe.png" alt="ask-beroe"><b class="side-bar-open">Ask Beroe</b></a>
                     </span>
                 </div>
@@ -39,19 +39,19 @@
         </nav>
         <nav id="navbar-tail">
             <ul>
-                <li><a class="nav active" href="#">Dashboard</a></li>
-                <li><a class="nav" href="#">Discussions</a></li>
-                <li><a class="nav" href="#">Interesting Reads</a></li>
+                <li><a id="dashboard" class="nav-active" href="#" onclick="navActive(this.id)">Dashboard</a></li>
+                <li><a id="discussions" class="" href="#" onclick="navActive(this.id)">Discussions</a></li>
+                <li><a id="interesting-reads" class="" href="#" onclick="navActive(this.id)">Interesting Reads</a></li>
             </ul>
-            <a class="nav" href="#">Customised Reports</a>
+            <a id="customised-reports" class="nav" href="#" onclick="navActive(this.id)">Customised Reports</a>
         </nav>
         <div class="sidebar animate-right" id="right-menu">
-            <button id="side-bar-close" class="btn">Close &times;</button>
+            <button id="side-bar-close" onclick="toggleHiddenItems(event,'right-menu')" class="btn">Close &times;</button>
         </div>
         <div class="noti-card animate-top" id="noti-toggle">
             <div class="arrow_box">
                 <h3>Notifications</h3>
-                <button class="btn" onclick="closeNoti()">Close &times;</button>
+                <button class="btn" onclick="toggleHiddenItems(event,'noti-toggle')">Close &times;</button>
             </div>
         </div>
     </header>
@@ -175,16 +175,16 @@
         <div class="item">
             <div class="blog-article">
                 <div class="card grey-card">
-                    <img onclick="document.getElementById('id01').style.display='block'" src="images/add-index.png" alt="Avatar">
+                    <img onclick="document.getElementById('id01').classList.toggle('hidden')" src="images/add-index.png" alt="Avatar">
                     <p>Add Indices</p>
                 </div>
             </div>
         </div>
     </div>
-    <div id="id01" class="modal">
+    <div id="id01" class="modal hidden">
         <div class="modal-content">
             <header class="container"> 
-                <span onclick="document.getElementById('id01').style.display='none'" 
+                <span onclick="document.getElementById('id01').classList.toggle('hidden')" 
                 class="button display-topright">&times;</span>
                 <h1>Add Indices</h1>
             </header>
@@ -196,7 +196,7 @@
             </footer>
         </div>
     </div>
-    <div id="id02" class="modal">
+    <div id="id02" class="modal hidden">
         <div class="modal-content">
             <header class="container"> 
                 <span onclick="noDel()" 
@@ -213,7 +213,7 @@
     </div>
     </section>
     <!-- Section 3 -->
-    <section class="blog-article">
+    <section class="blog-article" id="section3">
         <div class="card">
             <h4>BLOG</h4>
             <img src="images/building.jpg" alt="Avatar">
@@ -233,7 +233,7 @@
                             <p class="icons-size" >15 K</p>
                         </div>
                         <div class="align-more">
-                            <a href="#" class="change-link-text">More</a>
+                            <a href="#" class="change-link-text" id="more0" onclick="displayText(this.id)">More</a>
                             <img class="align-more-icon" src="images/chevron.png" alt=">">
                         </div>
                     </div>
@@ -261,7 +261,7 @@
                             <img class="down-size" src="images/download-icon.png" alt="download-icon">
                         </div>
                         <div class="align-more">
-                            <a href="#" class="change-link-text">More</a>
+                            <a href="#" class="change-link-text" id="more1"  onclick="displayText(this.id)">More</a>
                             <img class="align-more-icon" src="images/chevron.png" alt=">">
                         </div>
                     </div>
@@ -289,7 +289,7 @@
                             <img class="down-size" src="images/download-icon.png" alt="download-icon">
                         </div>
                         <div class="align-more">
-                            <a href="#" class="change-link-text">More</a>
+                            <a href="#" class="change-link-text" id="more2"  onclick="displayText(this.id)">More</a>
                             <img class="align-more-icon" src="images/chevron.png" alt=">">
                         </div>
                     </div>
@@ -304,6 +304,6 @@
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
-    <script src="index.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
