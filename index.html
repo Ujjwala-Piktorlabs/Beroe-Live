@@ -7,7 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Titillium+Web&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" />
-    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/script.css">
     <link rel="stylesheet" href="css/media.css">
@@ -40,18 +39,18 @@
         <nav id="navbar-tail">
             <ul>
                 <li><a id="dashboard" class="nav-active" href="#" onclick="navActive(this.id)">Dashboard</a></li>
-                <li><a id="discussions" class="" href="#" onclick="navActive(this.id)">Discussions</a></li>
-                <li><a id="interesting-reads" class="" href="#" onclick="navActive(this.id)">Interesting Reads</a></li>
+                <li><a id="discussions" href="#" onclick="navActive(this.id)">Discussions</a></li>
+                <li><a id="interesting-reads" href="#" onclick="navActive(this.id)">Interesting Reads</a></li>
             </ul>
-            <a id="customised-reports" class="nav" href="#" onclick="navActive(this.id)">Customised Reports</a>
+            <a id="customised-reports" href="#" onclick="navActive(this.id)">Customised Reports</a>
         </nav>
-        <div class="sidebar animate-right" id="right-menu">
+        <div class="sidebar" id="right-menu">
             <button id="side-bar-close" onclick="toggleHiddenItems(event,'right-menu')" class="btn">Close &times;</button>
         </div>
-        <div class="noti-card animate-top" id="noti-toggle">
+        <div class="noti-card" id="noti-toggle">
             <div class="arrow_box">
                 <h3>Notifications</h3>
-                <button class="btn" onclick="toggleHiddenItems(event,'noti-toggle')">Close &times;</button>
+                <button id="notification-close" class="btn" onclick="toggleHiddenItems(event,'noti-toggle')">Close &times;</button>
             </div>
         </div>
     </header>

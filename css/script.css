@@ -10,14 +10,20 @@
     position:fixed!important;
     z-index:1;
     overflow:auto;
+    right: -250px;
+    transition: all 500ms linear;
+}
+.sidebar.active{
+    right: 0px;
 }
 .sidebar .btn {
     width: 100%;
     margin: 10px;
 }
+
 .animate-right {
-    position:relative;
-    animation:animateright 0.3s;
+    position: relative;
+    animation:animateright 0.5s;
 }
 @keyframes animateright {
     from{
@@ -27,6 +33,31 @@
         right:0;
         opacity:1;}
 }
+.animate-close {
+    position: static;
+    animation:animateleft 0.5s; 
+    /* animation-direction: reverse; */
+}
+@keyframes animateleft {
+    from{
+        right:300px;
+        opacity:1;} 
+    to{
+        right:0px;
+        opacity:0;}
+}
+/* .sidebar-right-nav {
+    -webkit-transform: translate3d(-100%, 0px, 0px);
+    transform: translate3d(-100%, 0px, 0px);
+    visibility: visible;
+    transition: all 0.5s ease 0s;
+    -webkit-transition: all 0.5s ease 0s;
+}
+.closed .sidebar-right-nav {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    transform: translate3d(0px, 0px, 0px);
+    visibility: visible; */
+/* }s */
 
 /* Notification icon card */
 #noti-toggle{
@@ -110,7 +141,6 @@
 .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
     background-color: #5d52a8!important;
 }
-
 .owl-carousel .owl-item img{
     width: 20%;
     display: block;

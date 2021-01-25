@@ -2,15 +2,13 @@
 function navActive(id){
   let el = document.getElementById(id)
   let current = document.querySelectorAll(".nav-active");
-  console.log(current);
   current.forEach((ele) => {
     ele.classList.remove('nav-active')
   })
-  console.log(id);
   el.classList.add("nav-active")
 }
 
-//More-Less text for Blog-Article *********************
+//More-Less text for Blog-Article
 function displayText(id){
   let elem = document.getElementById(id)
   let cardHeader = elem.parentNode.parentNode.previousElementSibling.querySelector('.blog-content.show-text')
@@ -21,22 +19,35 @@ function displayText(id){
   }
 }
 
-//toggle display
+//toggle display notification and side bar
 function toggleHiddenItems(event,param) {
   let x = document.getElementById(param)
+  if(x.classList.contains('shown')){
+    if(param === 'right-menu'){
+      x.classList.add('animate-close')
+      x.classList.remove('animate-right')
+    }
+  }else{
+    if(param === 'right-menu'){
+      console.log(param);
+      x.classList.add('animate-right')
+      x.classList.remove('animate-close')
+    }
+  }
   x.classList.toggle('shown')
   event.stopPropagation()
 }
 
+//Body click close notification & side bar
 document.onclick = function(){
-    let shownElements  = document.querySelectorAll('.shown');
-    shownElements.forEach((el)=>{
-      if(el.classList.contains("shown"))
-      el.classList.remove("shown")
-    })
+  let shownElements  = document.querySelectorAll('.shown');
+  shownElements.forEach((el)=>{
+    if(el.classList.contains("shown"))
+    el.classList.remove("shown")
+  })
 };
 
-// carousel *******************************************
+// carousel 
 $(document).ready(function(){
   $(".owl-carousel").owlCarousel(
     {
@@ -45,15 +56,15 @@ $(document).ready(function(){
       nav:true,
       navText: ["<img src='images/chevron-left.png' style='height:13px'>","<img src='images/chevron.png' style='height:13px'>"],
       responsive:{
-          0:{
-              items:1
-          },
-          600:{
-              items:2
-          },
-          1000:{
-              items:3
-          }
+        0:{
+          items:1
+        },
+        600:{
+          items:2
+        },
+        1000:{
+          items:3
+        }
       }
     }
   );
